@@ -1,0 +1,33 @@
+#server.port: 8888
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://localhost:8080/my.demo/eureka/
+      
+  
+
+  server:
+    remote-region-connect-timeout-ms: 20000
+    remote-region-read-timeout-ms: 20000
+    peer-node-connect-timeout-ms: 20000
+    peer-node-read-timeout-ms: 20000
+    a-s-g-query-timeout-ms: 20000
+    
+feign: 
+    httpclient:
+      time-to-live: 50000
+    client: 
+      config:  
+        feignName: 
+          read-timeout: 5000
+          connect-timeout: 5000
+hystrix:
+  command:  
+      default:  
+        execution:  
+          isolation:  
+            thread:  
+              timeoutInMilliseconds: 5000  
