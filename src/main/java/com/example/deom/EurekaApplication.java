@@ -11,14 +11,17 @@ import org.springframework.context.annotation.ComponentScan;
 // 开启通用注解扫描
 @ComponentScan
 /*
-@Configuration
-@SpringBootApplication
-@EnableAutoConfiguration*/
+ * @Configuration
+ * 
+ * @SpringBootApplication
+ * 
+ * @EnableAutoConfiguration
+ */
 public class EurekaApplication extends SpringBootServletInitializer {
 
-	// public static void main(String[] args) {
-	// SpringApplication.run(EurekaApplication.class, args);
-	// }
+	/*public static void main(String[] args) {
+		SpringApplication.run(EurekaApplication.class, args);
+	}*/
 
 	/**
 	 * 实现SpringBootServletInitializer可以让spring-boot项目在web容器中运行
@@ -28,4 +31,8 @@ public class EurekaApplication extends SpringBootServletInitializer {
 		builder.sources(this.getClass());
 		return super.configure(builder);
 	}
+	
+	
+	
+	
 }
