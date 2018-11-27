@@ -9,8 +9,8 @@ eureka:
       instance: 
         prefer-ip-address: true
         metadata-map:
-          configPath:${server.servlet.context-path:}
-          management.context-path:${server.servlet.context-path:}    
+          configPath: ${server.servlet.context-path:}
+          management.context-path: ${server.servlet.context-path:}    
   
 
   server:
