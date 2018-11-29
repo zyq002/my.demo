@@ -28,6 +28,12 @@ feign:
         feignName: 
           read-timeout: 5000
           connect-timeout: 5000
+zuul:
+  routes:
+    my.order:
+      path: /my.order/**
+      strip-prefix: false            
+          
 hystrix:
   command:  
       default:  
